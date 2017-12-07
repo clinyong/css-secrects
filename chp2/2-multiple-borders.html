@@ -10,15 +10,45 @@
         .container {
             width: 200px;
             height: 200px;
-            margin: 40px auto 0;
+            margin: 60px auto;
             background: yellowgreen;
-            box-shadow: 0 0 0 10px #655; /* Notice the forth value here */
+        }
+
+        .shadow-border {
+            /* Notice the forth value here */
+            box-shadow: 0 0 0 10px #655;
+        }
+
+        .multiple-borders {
+            box-shadow: 0 0 0 10px #655, 0 0 0 20px deeppink;
+        }
+
+        .with-shadow {
+            box-shadow: 0 0 0 10px #655, 0 0 0 20px deeppink, 0 2px 20px 20px rgba(0, 0, 0, .6);
+        }
+
+        /* Two borders with outline */
+
+        .outline {
+            border: 10px solid #655;
+            outline: 10px solid deeppink;
+        }
+
+        .outline-offset {
+            background-color: #655;
+            border: 10px solid #655;
+            outline: 2px dashed #fff;
+            outline-offset: -15px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container"></div>
+    <div class="container shadow-border"></div>
+    <div class="container multiple-borders"></div>
+    <div class="container with-shadow"></div>
+    <div class="container outline"></div>
+    <div class="container outline-offset"></div>
 </body>
 
 </html>
