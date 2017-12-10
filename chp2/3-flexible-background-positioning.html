@@ -11,15 +11,30 @@
             width: 400px;
             height: 200px;
             margin: 40px auto;
+            box-sizing: border-box;
             background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat bottom right #58a;
-            /* !!! */
+        }
+
+        .bg-position {
             background-position: bottom 20px right 20px;
+        }
+
+        .bg-origin {
+            padding: 20px;
+            background-origin: content-box;
+        }
+
+        .calc {
+            /* notice the space around - here */
+            background-position: calc(100% - 20px) calc(100% - 20px)
         }
     </style>
 </head>
 
 <body>
-    <div class="container"></div>
+    <div class="container bg-position"></div>
+    <div class="container bg-origin"></div>
+    <div class="container calc"></div>
 </body>
 
 </html>
