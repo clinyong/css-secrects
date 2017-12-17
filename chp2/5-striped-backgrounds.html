@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 200px;
+            margin: 40px auto;
+        }
+
+        .bg1 {
+            background: linear-gradient(#fb3, #58a);
+        }
+
+        .bg2 {
+            /*
+             * 顶部的 20% 区域被填充为 #fb3 实色，而底部 20% 区域被填充为 #58a 实色
+             * 剩下的部分为渐变的颜色
+            */
+            background: linear-gradient(#fb3 20%, #58a 80%);
+        }
+
+        .bg3 {
+            /*
+             * 没有剩余空间用于渐变
+            */
+            background: linear-gradient(#fb3 50%, #58a 50%);
+        }
+
+        .bg4 {
+            background: linear-gradient(#fb3 50%, #58a 50%);
+            background-size: 100% 40px;
+        }
+
+        .bg5 {
+            background: linear-gradient(to right, #fb3 50%, #58a 50%);
+            background-size: 40px 100%;
+        }
+
+        .bg6 {
+            background: linear-gradient(45deg, #fb3 50%, #58a 50%);
+            background-size: 40px 40px;
+        }
+
+        /* TODO: 斜向条纹 */
+    </style>
+</head>
+
+<body>
+    <div class="container bg1"></div>
+    <div class="container bg2"></div>
+    <div class="container bg3"></div>
+    <div class="container bg4"></div>
+    <div class="container bg5"></div>
+    <div class="container bg6"></div>
+</body>
+
+</html>
