@@ -13,23 +13,12 @@
             margin: 40px auto;
         }
 
+        /*
+        * linear-gradient color rules: https://drafts.csswg.org/css-images-3/#color-stop
+        */
+
         .bg1 {
             background: linear-gradient(#fb3, #58a);
-        }
-
-        .bg2 {
-            /*
-             * 顶部的 20% 区域被填充为 #fb3 实色，而底部 20% 区域被填充为 #58a 实色
-             * 剩下的部分为渐变的颜色
-            */
-            background: linear-gradient(#fb3 20%, #58a 80%);
-        }
-
-        .bg3 {
-            /*
-             * 没有剩余空间用于渐变
-            */
-            background: linear-gradient(#fb3 50%, #58a 50%);
         }
 
         .bg4 {
@@ -42,22 +31,44 @@
             background-size: 40px 100%;
         }
 
-        .bg6 {
-            background: linear-gradient(45deg, #fb3 50%, #58a 50%);
-            background-size: 40px 40px;
+        .bg7 {
+            background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+            background-size: 42.5px 42.5px;
         }
 
-        /* TODO: 斜向条纹 */
+        /* using auto repeat */
+
+        .bg8 {
+            background: repeating-linear-gradient(45deg,
+            #fb3, #fb3 25%, #58a 0, #58a 50%);
+            background-size: 42.5px 42.5px;
+        }
+
+        /* 使用 px 单位，可以随意修改倾斜角度 */
+
+        .bg9 {
+            background: repeating-linear-gradient(45deg,
+            #fb3, #fb3 15px, #58a 0, #58a 30px);
+        }
+
+        .bg10 {
+            background: #58a;
+            background-image: repeating-linear-gradient(30deg,
+            hsla(0, 0%, 100%, .1),
+            hsla(0, 0%, 100%, .1) 15px,
+            transparent 0, transparent 30px);
+        }
     </style>
 </head>
 
 <body>
     <div class="container bg1"></div>
-    <div class="container bg2"></div>
-    <div class="container bg3"></div>
     <div class="container bg4"></div>
     <div class="container bg5"></div>
-    <div class="container bg6"></div>
+    <div class="container bg7"></div>
+    <div class="container bg8"></div>
+    <div class="container bg9"></div>
+    <div class="container bg10"></div>
 </body>
 
 </html>
