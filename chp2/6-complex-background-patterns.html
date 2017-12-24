@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 200px;
+            margin: 40px auto;
+        }
+
+        .bg1 {
+            background: white;
+            background-image: linear-gradient(90deg,
+            rgba(200, 0, 0, .5) 50%, transparent 0),
+            linear-gradient( rgba(200, 0, 0, .5) 50%, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        /* change transparent to other colors to see how it works */
+
+        .bg2 {
+            background: #58a;
+            background-image: linear-gradient(white 1px, transparent 0),
+            linear-gradient(90deg, white 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        .bg3 {
+            background: #655;
+            background-image: radial-gradient(tan 30%, transparent 0),
+            radial-gradient(tan 30%, transparent 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bg1"></div>
+    <div class="container bg2"></div>
+    <div class="container bg3"></div>
+</body>
+
+</html>
