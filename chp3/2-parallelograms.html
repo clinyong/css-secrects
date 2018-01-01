@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .simple {
+            width: 200px;
+            height: 200px;
+            background-color: #eee;
+            transform: skewX(-45deg);
+        }
+
+        .simple>div {
+            transform: skewX(45deg);
+        }
+
+        .fake-element {
+            margin-top: 20px;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            text-align: right;
+        }
+
+        .fake-element::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #eee;
+            transform: skewX(-45deg);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="simple">
+        <div>
+
+            Hello World
+        </div>
+    </div>
+
+    <div class="fake-element">
+        Hello World
+    </div>
+</body>
+
+</html>
