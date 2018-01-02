@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .picture {
+            width: 200px;
+            transform: rotate(45deg);
+            overflow: hidden;
+            margin-top: 60px;
+            margin-left: 60px;
+        }
+
+        .picture>img {
+            transform: rotate(-45deg) scale(1.5);
+            max-width: 100%;
+        }
+
+        .picture2 {
+            width: 200px;
+            margin-top: 60px;
+            margin-left: 60px;
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="picture">
+        <img src="http://csssecrets.io/images/adamcatlace.jpg" alt="..." />
+    </div>
+
+    <img class="picture2" src="http://csssecrets.io/images/adamcatlace.jpg" />
+</body>
+
+</html>
