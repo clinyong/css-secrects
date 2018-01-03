@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .tab {
+            margin: 40px;
+            width: 200px;
+            height: 100px;
+            position: relative;
+            padding: 5px 10px;
+            color: #fff;
+        }
+
+        .tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: #58a;
+            transform: perspective(.5em) rotateX(5deg) scale(1.5);
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="tab">
+        trapezoid
+    </a>
+</body>
+
+</html>
