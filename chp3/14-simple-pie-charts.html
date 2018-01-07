@@ -13,6 +13,7 @@
             border-radius: 50%;
             background: yellowgreen;
             background-image: linear-gradient(to right, transparent 50%, #655 0);
+            margin-top: 20px;
         }
 
         .pie::after {
@@ -25,11 +26,37 @@
             margin-left: 50%;
             transform-origin: left;
         }
+
+        /* when wanting the radio more than 50% */
+
+        .pie2::after {
+            background-color: #655;
+        }
+
+        /* make pie animate */
+        @keyframes spin {
+            to {
+                transform: rotate(.5turn);
+            }
+        }
+
+        @keyframes bg {
+            50% {
+                background: #655;
+            }
+        }
+
+        .animate-pie::after {
+            transform: initial;
+            animation: spin 3s linear infinite, bg 6s step-end infinite;
+        }
     </style>
 </head>
 
 <body>
     <div class="pie"></div>
+    <div class="pie pie2"></div>
+    <div class="pie animate-pie"></div>
 </body>
 
 </html>
