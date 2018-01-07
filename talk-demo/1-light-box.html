@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc) 0 0, linear-gradient(45deg, #ccc 25%, #eee 25%, #eee 75%, #ccc 75%, #ccc) 20px 20px #eee;
+            background-size: 40px 40px;
+            font-size: 40px;
+        }
+
+        .picture {
+            display: block;
+            margin: 1em auto;
+            padding: .5em;
+            background-color: #fff;
+            box-shadow: 2px 2px 10px black, 0 0 0 999px transparent;
+        }
+
+        .lightbox {
+            width: 0;
+            height: 0;
+            background: url(http://lea.verou.me/css-4d/img/secret.jpg) center, white;
+            background-size: cover;
+            background-clip: content-box, border-box;
+            opacity: 1 !important;
+            transition: 1s height, 1s 1s width, .4s 2s box-shadow;
+        }
+
+        .lightbox.current {
+            width: 500px;
+            height: 500px;
+            transition-property: width, height, box-shadow;
+            box-shadow: 2px 2px 10px black, 0 0 0 999px rgba(0, 0, 0, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="picture lightbox" onclick="toggleIMG()">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    const img = document.querySelector(".lightbox");
+    function toggleIMG() {
+        img.classList.toggle("current")
+    }
+</script>
+
+</html>
