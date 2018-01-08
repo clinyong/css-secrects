@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .ball {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: red;
+            background-image: radial-gradient(circle at 35% 25%, white 5%, hsla(0, 0%, 100%, .85) 6%, hsla(0, 0%, 100%, 0) 50%, transparent 50%, rgba(0, 0, 0, .8));
+            border-radius: 50%;
+            transition: 1s cubic-bezier(.4,.63,.55,1.51);
+            margin-left: 100px;
+        }
+
+        .ball::after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            right: 5px;
+            top: 85px;
+            bottom: -10px;
+            z-index: -1;
+            background-image: radial-gradient(closest-side, black, transparent 99%);
+            border-radius: 50%;
+        }
+
+        .ball+.ball {
+            background-color: slategray;
+            margin-top: 20px;
+            transition-timing-function: linear;
+        }
+
+        .rail:hover>.ball {
+            margin-left: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rail">
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

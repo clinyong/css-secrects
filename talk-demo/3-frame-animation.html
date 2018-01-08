@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+            to {
+                background-position: -500px 0;
+            }
+        }
+
+        .character {
+            width: 50px;
+            height: 72px;
+            background: url(http://lea.verou.me/css-4d/img/frames.png) 0 0;
+            animation: 1s move steps(10) infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="character">
+
+    </div>
+</body>
+
+</html>
